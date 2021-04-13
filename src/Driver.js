@@ -1,21 +1,20 @@
 
-function Driver({desti, source, setSource, setDesti, handleClick, data, handleChange, handleDestiChange}) {
+function Driver({driverSource, driverDesti, handleDriverSource, data, handleDriverDestiChange, handleDriverClick}) {
   return (
 
-    // <div>
-    //  <header>Driver</header>
-    //  <input
-    //    type="text"
-    //     onChange={handleChange}
-    //     value={source}
-    //   />
-    //   <input
-    //     type="text"
-    //      onChange={handleDestiChange}
-    //      value={desti}
-    //    />
-    //    <button onClick={handleClick}>Sent</button>
-    // </div>
+    <div>
+     <header>Driver</header>
+     <input
+       type="text"
+        onChange={handleDriverSource}
+        value={driverSource}
+      />
+      <input
+        type="text"
+         onChange={handleDriverDestiChange}
+         value={driverDesti}
+       />
+       <button onClick={handleDriverClick}>Sent</button>
 
     <div>
       {data.map(dt => (
@@ -23,6 +22,7 @@ function Driver({desti, source, setSource, setDesti, handleClick, data, handleCh
          <p>{dt.source} to {dt.desti}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 }
